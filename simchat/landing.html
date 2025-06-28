@@ -3,82 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Blockchain Agent - The Future of Crypto Intelligence</title>
-    <meta name="description" content="The most advanced AI agent for blockchain data. Get instant insights across 60+ chains with natural language queries.">
+    <title>Xypher | AI Blockchain Intelligence Platform</title>
+    <meta name="description" content="Decode the blockchain with Xypher - Advanced AI-powered blockchain intelligence. Real-time analytics across 60+ networks for institutional investors.">
+    
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <style>
+        /* ===== PREMIUM DESIGN SYSTEM ===== */
+        :root {
+            /* Premium Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+            
+            /* Sophisticated Color Palette */
+            --color-primary: #000000;
+            --color-primary-rgb: 0, 0, 0;
+            --color-secondary: #6366f1;
+            --color-secondary-rgb: 99, 102, 241;
+            --color-accent: #10b981;
+            --color-accent-rgb: 16, 185, 129;
+            
+            /* Neutral Palette */
+            --color-neutral-50: #fafafa;
+            --color-neutral-100: #f5f5f5;
+            --color-neutral-200: #e5e5e5;
+            --color-neutral-300: #d4d4d4;
+            --color-neutral-400: #a3a3a3;
+            --color-neutral-500: #737373;
+            --color-neutral-600: #525252;
+            --color-neutral-700: #404040;
+            --color-neutral-800: #262626;
+            --color-neutral-900: #171717;
+            --color-neutral-950: #0a0a0a;
+            
+            /* Glass Morphism */
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+            --gradient-surface: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            --gradient-text: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
+            
+            /* Spacing System */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            --space-32: 8rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-2xl: 2rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --dark-bg: #1a1a2e;
-            --darker-bg: #16213e;
-            --accent-blue: #0f3460;
-            --text-light: #ffffff;
-            --text-gray: #b8c6db;
-            --text-muted: #8892b0;
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--dark-bg);
-            color: var(--text-light);
+            font-family: var(--font-primary);
+            background: var(--color-primary);
+            color: var(--color-neutral-100);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
+        /* ===== LAYOUT SYSTEM ===== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 var(--space-6);
         }
 
-        /* Header */
+        .container-wide {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+
+        /* ===== PREMIUM HEADER ===== */
         .header {
-            padding: 20px 0;
-            position: relative;
-            z-index: 100;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: var(--space-4) 0;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--color-neutral-50);
+            text-decoration: none;
         }
 
-        .preview-badge {
-            background: var(--secondary-gradient);
-            padding: 8px 16px;
-            border-radius: 25px;
-            font-size: 14px;
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-8);
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--color-neutral-300);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--color-neutral-50);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--color-neutral-50);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
             font-weight: 600;
-            color: white;
-            animation: pulse 2s infinite;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        .nav-cta:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
         }
 
-        /* Hero Section */
+        /* ===== HERO SECTION ===== */
         .hero {
-            padding: 80px 0 120px;
+            padding: calc(100px + var(--space-20)) 0 var(--space-32);
             text-align: center;
             position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
 
         .hero::before {
@@ -88,7 +223,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -97,349 +235,679 @@
             z-index: 2;
         }
 
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-xl);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-neutral-200);
+            margin-bottom: var(--space-8);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-badge-icon {
+            width: 8px;
+            height: 8px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
         .hero h1 {
-            font-size: 64px;
+            font-size: clamp(3rem, 8vw, 5.5rem);
             font-weight: 800;
-            margin-bottom: 24px;
-            background: var(--primary-gradient);
+            line-height: 1.1;
+            margin-bottom: var(--space-6);
+            background: var(--gradient-text);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            line-height: 1.1;
+            letter-spacing: -0.025em;
         }
 
-        .hero .subtitle {
-            font-size: 28px;
-            color: var(--text-gray);
-            margin-bottom: 16px;
-            font-weight: 300;
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 600;
+            color: var(--color-neutral-300);
+            margin-bottom: var(--space-4);
+            letter-spacing: -0.025em;
         }
 
-        .hero .description {
-            font-size: 20px;
-            color: var(--text-muted);
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--color-neutral-400);
             max-width: 600px;
-            margin: 0 auto 48px;
-            line-height: 1.5;
+            margin: 0 auto var(--space-10);
+            line-height: 1.7;
         }
 
-        /* CTA Buttons */
-        .cta-buttons {
+        /* ===== PREMIUM BUTTONS ===== */
+        .cta-group {
             display: flex;
-            gap: 20px;
+            gap: var(--space-4);
             justify-content: center;
-            margin-bottom: 60px;
+            margin-bottom: var(--space-16);
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 16px 32px;
-            border-radius: 50px;
-            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-4) var(--space-6);
+            border-radius: var(--radius-lg);
             font-weight: 600;
+            font-size: 1rem;
             text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
             cursor: pointer;
             min-width: 200px;
-            text-align: center;
+            justify-content: center;
         }
 
         .btn-primary {
-            background: var(--primary-gradient);
+            background: var(--gradient-primary);
             color: white;
-            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+            box-shadow: var(--shadow-lg);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 48px rgba(102, 126, 234, 0.4);
+            box-shadow: var(--shadow-2xl);
         }
 
         .btn-secondary {
-            background: transparent;
-            color: var(--text-light);
-            border: 2px solid var(--text-gray);
+            background: var(--glass-bg);
+            color: var(--color-neutral-50);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
-            background: var(--text-gray);
-            color: var(--dark-bg);
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
         }
 
-        /* Features Grid */
+        /* ===== SOCIAL PROOF ===== */
+        .social-proof {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-8);
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+
+        .social-proof-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: 0.875rem;
+            color: var(--color-neutral-400);
+        }
+
+        .social-proof-icon {
+            width: 16px;
+            height: 16px;
+            fill: var(--color-accent);
+        }
+
+        /* ===== FEATURES SECTION ===== */
         .features {
-            padding: 80px 0;
-            background: var(--darker-bg);
+            padding: var(--space-32) 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid var(--glass-border);
         }
 
-        .features h2 {
+        .section-header {
             text-align: center;
-            font-size: 48px;
-            margin-bottom: 20px;
-            background: var(--primary-gradient);
+            margin-bottom: var(--space-16);
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-lg);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: var(--space-4);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: var(--space-4);
+            background: var(--gradient-text);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            letter-spacing: -0.025em;
         }
 
-        .features-subtitle {
-            text-align: center;
-            font-size: 20px;
-            color: var(--text-muted);
-            margin-bottom: 60px;
+        .section-description {
+            font-size: 1.125rem;
+            color: var(--color-neutral-400);
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
+            line-height: 1.7;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-8);
+            margin-top: var(--space-16);
         }
 
         .feature-card {
-            background: var(--accent-blue);
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
         }
 
         .feature-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-            display: block;
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-6);
         }
 
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
-            color: var(--text-light);
+        .feature-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
         }
 
-        .feature-card p {
-            color: var(--text-muted);
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--space-3);
+            color: var(--color-neutral-50);
+        }
+
+        .feature-description {
+            color: var(--color-neutral-400);
             line-height: 1.6;
         }
 
-        /* Preview Section */
-        .preview-section {
-            padding: 80px 0;
+        /* ===== STATS SECTION ===== */
+        .stats {
+            padding: var(--space-24) 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .stat-item {
             text-align: center;
         }
 
-        .preview-section h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            background: var(--secondary-gradient);
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            line-height: 1;
+            margin-bottom: var(--space-2);
         }
 
-        .preview-section p {
-            font-size: 20px;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .stat-label {
+            color: var(--color-neutral-400);
+            font-weight: 500;
         }
 
-        .preview-features {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-
-        .preview-feature {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: var(--text-gray);
-            font-size: 18px;
-        }
-
-        .preview-feature span {
-            font-size: 24px;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--darker-bg);
-            padding: 40px 0;
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: var(--space-32) 0;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--glass-bg);
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
         }
 
-        .footer p {
-            color: var(--text-muted);
-            margin-bottom: 10px;
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: var(--space-16) 0 var(--space-8);
+            border-top: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.02);
         }
 
-        /* Responsive */
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+            margin-bottom: var(--space-8);
+        }
+
+        .footer-section h4 {
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--color-neutral-50);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-2);
+        }
+
+        .footer-links a {
+            color: var(--color-neutral-400);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-neutral-200);
+        }
+
+        .footer-bottom {
+            padding-top: var(--space-8);
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            color: var(--color-neutral-500);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 48px;
+            .nav-links {
+                display: none;
             }
             
-            .hero .subtitle {
-                font-size: 24px;
+            .hero {
+                padding: calc(80px + var(--space-16)) 0 var(--space-24);
             }
-
-            .hero .description {
-                font-size: 18px;
-            }
-
-            .cta-buttons {
+            
+            .cta-group {
                 flex-direction: column;
                 align-items: center;
             }
-
+            
             .btn {
                 width: 100%;
                 max-width: 300px;
             }
-
-            .features h2 {
-                font-size: 36px;
+            
+            .features-grid {
+                grid-template-columns: 1fr;
             }
-
-            .preview-section h2 {
-                font-size: 36px;
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
+        }
 
-            .preview-features {
-                flex-direction: column;
-                gap: 20px;
+        @media (max-width: 480px) {
+            .container, .container-wide {
+                padding: 0 var(--space-4);
             }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .text-gradient {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     </style>
 </head>
 <body>
+    <!-- Premium Header -->
     <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="logo">🤖 AI Blockchain Agent</div>
-                <div class="preview-badge">🚀 Preview Launch</div>
-            </nav>
-        </div>
+        <nav class="container">
+            <div class="nav">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+                            <defs>
+                                <linearGradient id="navGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00FF88;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M8 8 L32 32 M32 8 L8 32" stroke="url(#navGradient)" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="20" cy="20" r="15" fill="none" stroke="url(#navGradient)" stroke-width="2" opacity="0.3"/>
+                            <circle cx="20" cy="20" r="3" fill="url(#navGradient)"/>
+                        </svg>
+                    </div>
+                    <span>Xypher</span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#analytics" class="nav-link">Analytics</a></li>
+                    <li><a href="#enterprise" class="nav-link">Enterprise</a></li>
+                    <li><a href="#docs" class="nav-link">Documentation</a></li>
+                </ul>
+                
+                <a href="index.html" class="nav-cta">Start Free Trial</a>
+            </div>
+        </nav>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <div class="hero-content">
-                    <h1>The Future of<br>Crypto Intelligence</h1>
-                    <p class="subtitle">AI-Powered Blockchain Analytics</p>
-                    <p class="description">
-                        Get instant insights across 60+ EVM chains and Solana with natural language queries. 
-                        No more complex APIs or confusing interfaces.
+                <div class="hero-content animate-fade-in-up">
+                    <div class="hero-badge">
+                        <div class="hero-badge-icon"></div>
+                        <span>Next-Gen Blockchain Intelligence</span>
+                    </div>
+                    
+                    <h1>Decode the Blockchain with Xypher</h1>
+                    <p class="hero-subtitle">AI-Powered Blockchain Intelligence</p>
+                    <p class="hero-description">
+                        Unlock the secrets of blockchain data with Xypher's advanced AI. 
+                        Real-time intelligence across 60+ networks, predictive analytics, and 
+                        cutting-edge insights for Web3 professionals and institutions.
                     </p>
-                    <div class="cta-buttons">
-                        <a href="/chat" class="btn btn-primary">Try 5 Free Queries 🚀</a>
-                        <a href="#features" class="btn btn-secondary">Learn More</a>
+                    
+                    <div class="cta-group">
+                        <a href="index.html" class="btn btn-primary">
+                            <span>Start Free Analysis</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#features" class="btn btn-secondary">
+                            <span>View Capabilities</span>
+                        </a>
+                    </div>
+                    
+                    <div class="social-proof">
+                        <div class="social-proof-item">
+                            <svg class="social-proof-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            <span>60+ Blockchain Networks</span>
+                        </div>
+                        <div class="social-proof-item">
+                            <svg class="social-proof-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Real-Time Processing</span>
+                        </div>
+                        <div class="social-proof-item">
+                            <svg class="social-proof-icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 1l3 6 6 1-4.5 4.5L18 19l-6-3-6 3 1.5-6.5L3 8l6-1 3-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Enterprise Security</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">60+</div>
+                        <div class="stat-label">Blockchain Networks</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">$2.5T+</div>
+                        <div class="stat-label">Assets Analyzed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime SLA</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">< 100ms</div>
+                        <div class="stat-label">Query Response</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
         <section class="features" id="features">
             <div class="container">
-                <h2>Powerful Features</h2>
-                <p class="features-subtitle">
-                    Everything you need to analyze blockchain data with the power of AI
-                </p>
+                <div class="section-header">
+                    <div class="section-badge">Xypher Intelligence</div>
+                    <h2 class="section-title">Advanced Analytics Suite</h2>
+                    <p class="section-description">
+                        Comprehensive blockchain intelligence tools designed for Web3 professionals, 
+                        DeFi traders, and institutional applications.
+                    </p>
+                </div>
                 
                 <div class="features-grid">
                     <div class="feature-card">
-                        <span class="feature-icon">💰</span>
-                        <h3>Multi-Chain Balances</h3>
-                        <p>Check token balances across 60+ EVM chains and Solana with a single query. Get real-time data instantly.</p>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Multi-Chain Portfolio Analytics</h3>
+                        <p class="feature-description">
+                            Real-time portfolio tracking across 60+ EVM networks and Solana. 
+                            Advanced risk metrics, yield analysis, and performance attribution.
+                        </p>
                     </div>
                     
                     <div class="feature-card">
-                        <span class="feature-icon">📊</span>
-                        <h3>Transaction Analysis</h3>
-                        <p>Analyze transaction history, patterns, and activity with natural language. No coding required.</p>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M3 3v18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Predictive Market Intelligence</h3>
+                        <p class="feature-description">
+                            AI-driven predictive models for price movements, liquidity analysis, 
+                            and market sentiment. Advanced algorithms trained on historical data.
+                        </p>
                     </div>
                     
                     <div class="feature-card">
-                        <span class="feature-icon">🖼️</span>
-                        <h3>NFT Collections</h3>
-                        <p>Explore NFT portfolios, metadata, and trading history across multiple blockchains.</p>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 9h6v6H9z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Institutional-Grade Security</h3>
+                        <p class="feature-description">
+                            Enterprise security infrastructure with SOC 2 compliance, 
+                            end-to-end encryption, and role-based access controls.
+                        </p>
                     </div>
                     
                     <div class="feature-card">
-                        <span class="feature-icon">🔍</span>
-                        <h3>Token Intelligence</h3>
-                        <p>Get detailed token information, pricing, market data, and holder distributions.</p>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Real-Time Data Processing</h3>
+                        <p class="feature-description">
+                            Sub-second data ingestion with 99.9% uptime SLA. 
+                            Stream processing for immediate insights and alerts.
+                        </p>
                     </div>
                     
                     <div class="feature-card">
-                        <span class="feature-icon">⚡</span>
-                        <h3>Real-Time Data</h3>
-                        <p>Access live blockchain data with instant updates. No delays, no stale information.</p>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="7.5,4.21 12,6.81 16.5,4.21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="7.5,19.79 7.5,14.6 3,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="21,12 16.5,14.6 16.5,19.79" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="12,22.81 12,17.6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Advanced DeFi Analytics</h3>
+                        <p class="feature-description">
+                            Deep DeFi protocol analysis with yield optimization, 
+                            impermanent loss calculations, and liquidity pool insights.
+                        </p>
                     </div>
                     
                     <div class="feature-card">
-                        <span class="feature-icon">🧠</span>
-                        <h3>AI-Powered Insights</h3>
-                        <p>Let AI understand your queries and provide intelligent analysis and recommendations.</p>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Custom API Integration</h3>
+                        <p class="feature-description">
+                            RESTful APIs and WebSocket feeds for seamless integration. 
+                            Custom endpoints for specific use cases and data requirements.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="preview-section">
+        <!-- CTA Section -->
+        <section class="cta-section">
             <div class="container">
-                <h2>Try the Preview</h2>
-                <p>
-                    Experience the future of blockchain analytics with our free preview. 
-                    Perfect for testing before our token launch.
-                </p>
-                
-                <div class="preview-features">
-                    <div class="preview-feature">
-                        <span>✅</span>
-                        <span>5 Free Queries Daily</span>
-                    </div>
-                    <div class="preview-feature">
-                        <span>✅</span>
-                        <span>60+ Blockchain Networks</span>
-                    </div>
-                    <div class="preview-feature">
-                        <span>✅</span>
-                        <span>Real-Time Data</span>
-                    </div>
-                    <div class="preview-feature">
-                        <span>✅</span>
-                        <span>AI-Powered Analysis</span>
-                    </div>
+                <div class="section-header">
+                    <h2 class="section-title">Ready to Decode the Future?</h2>
+                    <p class="section-description">
+                        Join Web3 pioneers using Xypher for blockchain intelligence. 
+                        Start with a free trial and experience next-generation analytics.
+                    </p>
                 </div>
                 
-                <div class="cta-buttons">
-                    <a href="/chat" class="btn btn-primary">Start Your Preview 🎯</a>
+                <div class="cta-group">
+                    <a href="index.html" class="btn btn-primary">
+                        <span>Start Free Trial</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Contact Sales</span>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Premium Footer -->
     <footer class="footer">
         <div class="container">
-            <p>🚀 <strong>Coming Soon:</strong> Full access through our AI agent token</p>
-            <p>Preview Mode • Experience the future of blockchain intelligence</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="#analytics">Analytics Suite</a></li>
+                        <li><a href="#api">API Access</a></li>
+                        <li><a href="#enterprise">Enterprise</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#blog">Research</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#compliance">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Xypher. All rights reserved. Decode the blockchain with AI intelligence.</p>
+            </div>
         </div>
     </footer>
 </body>

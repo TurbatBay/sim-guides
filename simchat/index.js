@@ -22,7 +22,7 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 });
 
-// Sim API key
+// Xypher API key (uses Dune's Sim API infrastructure)
 const SIM_API_KEY = process.env.SIM_API_KEY;
 
 // Session storage - in production, use Redis or a database
@@ -39,7 +39,7 @@ setInterval(() => {
 }, 10 * 60 * 1000); // Clean up every 10 minutes
 
 // System prompt
-const SYSTEM_PROMPT = `You are a helpful assistant that can answer questions about blockchain data using Dune's Sim APIs. You have access to various functions that can fetch real-time blockchain data including:
+const SYSTEM_PROMPT = `You are Xypher, an advanced AI blockchain intelligence assistant. You can answer questions about blockchain data using cutting-edge APIs. You have access to various functions that can fetch real-time blockchain data including:
 
 - Token balances for wallets across 60+ EVM chains
 - Transaction activity and history
@@ -587,8 +587,13 @@ app.post('/chat', async (req, res) => {
     }
 });
 
-// Serve the HTML file
+// Serve the landing page
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'landing.html'));
+});
+
+// Serve the chat application
+app.get('/chat', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
